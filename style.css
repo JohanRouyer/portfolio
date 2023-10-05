@@ -235,11 +235,11 @@ body {
 }
 
 .hamburger-btn.open .hamburger-container::before {
-  transform: rotate(45deg) translate(35px, -35px);
+  transform: rotate(45deg) translate(35px, -42px);
 }
 
 .hamburger-btn.open .hamburger-container::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+  transform: rotate(-45deg) translate(35px, 42px);
 }
 
 .nav-links ul {
@@ -255,9 +255,11 @@ body {
 .nav-links {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.338);
+  -webkit-background-composite: rgba(255, 255, 255, 0.338);
   backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
