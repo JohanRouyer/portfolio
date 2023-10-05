@@ -235,11 +235,11 @@ body {
 }
 
 .hamburger-btn.open .hamburger-container::before {
-  transform: rotate(45deg) translate(35px, -42px);
+  transform: rotate(45deg) translate(35px, -35px);
 }
 
 .hamburger-btn.open .hamburger-container::after {
-  transform: rotate(-45deg) translate(35px, 42px);
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .nav-links ul {
@@ -630,6 +630,13 @@ footer ul li a:hover {
 
   .hamburger-container::after {
     margin-top: -5px;
+  }
+  .hamburger-btn.open .hamburger-container::before {
+    transform: rotate(45deg) translate(35px, -42px);
+  }
+  
+  .hamburger-btn.open .hamburger-container::after {
+    transform: rotate(-45deg) translate(35px, 42px);
   }
 
   .about {
