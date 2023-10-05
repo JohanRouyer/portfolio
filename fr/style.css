@@ -1,5 +1,7 @@
+/* Importing fonts from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap");
 
+/* Common styles for all elements */
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +12,14 @@
   list-style: none;
 }
 
+/* Styles for the body of the page */
 body {
   background-color: #095fab;
   margin: 0;
   padding: 0;
 }
 
+/* Styles for the logo */
 .logo img {
   height: 175px;
   position: absolute;
@@ -23,6 +27,7 @@ body {
   top: -12px;
 }
 
+/* Animation for gradient background */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -37,6 +42,7 @@ body {
   }
 }
 
+/* Styles for the translation button */
 .translate a {
   text-decoration: none;
 }
@@ -66,6 +72,7 @@ body {
   transition: 1s box-shadow;
 }
 
+/* Hover effect for the translation button */
 .translate:hover {
   box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
 }
@@ -88,6 +95,7 @@ body {
   animation: 2s counterclockwise infinite;
 }
 
+/* Keyframes for clockwise rotation animation */
 @keyframes clockwise {
   0% {
     top: -5px;
@@ -135,6 +143,7 @@ body {
   }
 }
 
+/* Keyframes for counterclockwise rotation animation */
 @keyframes counterclockwise {
   0% {
     top: -5px;
@@ -182,10 +191,12 @@ body {
   }
 }
 
+/* Styles for the left part of the page */
 .part-left {
   margin-left: 20px;
 }
 
+/* Styles for the hamburger button */
 .hamburger-btn {
   position: relative;
   display: flex;
@@ -199,6 +210,7 @@ body {
   z-index: 2;
 }
 
+/* Styles for the hamburger container */
 .hamburger-container {
   width: 50px;
   height: 6px;
@@ -228,6 +240,7 @@ body {
   transform: translateY(16px);
 }
 
+/* Styles for the open state of the hamburger button */
 .hamburger-btn.open .hamburger-container {
   transform: translateX(-50px);
   background: transparent;
@@ -242,6 +255,7 @@ body {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+/* Styles for the navigation links */
 .nav-links ul {
   display: flex;
   flex-direction: column;
@@ -329,6 +343,7 @@ body {
   color: #3da35d;
 }
 
+/* Styles for the profile picture */
 .profile-pic {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -341,6 +356,7 @@ body {
   border-radius: 50px;
 }
 
+/* Styles for the About section */
 .about {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -360,6 +376,7 @@ body {
   font-size: 20px;
 }
 
+/* Styles for the links in the Links section */
 .links ul {
   width: 100%;
   display: flex;
@@ -407,6 +424,7 @@ body {
   opacity: 1;
 }
 
+/* Styles for the left car image */
 .left-car {
   display: flex;
   justify-content: left;
@@ -420,6 +438,7 @@ body {
   height: 375px;
 }
 
+/* Styles for the right car image */
 .right-car {
   display: flex;
   justify-content: right;
@@ -433,6 +452,7 @@ body {
   height: 275px;
 }
 
+/* Styles for the main wrapper */
 .wrapper {
   text-align: center;
 }
@@ -454,6 +474,7 @@ body {
   display: inline-block;
 }
 
+/* Styles for the footer */
 footer ul {
   margin: 0;
   padding: 0;
@@ -508,9 +529,7 @@ footer ul li a:hover {
   text-shadow: 0 0 5px rgb(12, 3, 145);
 }
 
-
-/*reponsive*/
-
+/* Responsive styles for screens up to 1350px width */
 @media screen and (max-width: 1350px) {
   .right-car img {
     width: 40%;
@@ -525,11 +544,10 @@ footer ul li a:hover {
   .left-car {
     top: 42%;
   }
-
 }
 
-@media screen and (max-width:1050px) {
-
+/* Responsive styles for screens up to 1050px width */
+@media screen and (max-width: 1050px) {
   .right-car img,
   .left-car img {
     display: none;
@@ -545,8 +563,8 @@ footer ul li a:hover {
   }
 }
 
-@media screen and (max-width:770px) {
-
+/* Responsive styles for screens up to 770px width */
+@media screen and (max-width: 770px) {
   .about h2 {
     font-size: 30px;
     margin-bottom: 10px;
@@ -557,7 +575,8 @@ footer ul li a:hover {
   }
 }
 
-@media screen and (max-width:605px) {
+/* Responsive styles for screens up to 605px width */
+@media screen and (max-width: 605px) {
   .profile-pic img {
     height: 150px;
     border-radius: 25px;
@@ -579,7 +598,6 @@ footer ul li a:hover {
     align-items: center;
     justify-content: center;
     width: 70%;
-
   }
 
   .link-wrapper:before {
@@ -587,10 +605,49 @@ footer ul li a:hover {
   }
 }
 
-@media screen and (max-width:500px) {
+/*About css*/
 
+/*Main-content*/
 
-.logo img {
+.competences{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 0;
+}
+.competence-title{
+  align-items: center;
+  background: #12141d;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.competence-box{
+  align-items: center;
+    background: #12141d;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.box-content{
+  align-items: center;
+  background: #4876e0;
+  border-radius: 8px;
+  display: flex;
+  flex: 0 1 20%;
+  height: 60px;
+  justify-content: space-evenly;
+  margin: 1%;
+}
+
+/* Responsive styles for screens up to 500px width */
+@media screen and (max-width: 500px) {
+  .logo img {
     top: 1.2%;
     height: 100px;
   }
@@ -631,16 +688,17 @@ footer ul li a:hover {
   .hamburger-container::after {
     margin-top: -5px;
   }
+
   .hamburger-btn.open .hamburger-container::before {
     transform: rotate(45deg) translate(35px, -42px);
   }
-  
+
   .hamburger-btn.open .hamburger-container::after {
     transform: rotate(-45deg) translate(35px, 42px);
   }
 
   .about {
     top: 55%;
-    width:70%;
+    width: 70%;
   }
 }
