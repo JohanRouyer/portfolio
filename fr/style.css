@@ -14,7 +14,9 @@
 
 /* Styles for the body of the page */
 body {
-  background-color: #095fab;
+  background: linear-gradient(-45deg, #76a3f0, #349fcd, #6085f3, #3823d5);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
   margin: 0;
   padding: 0;
 }
@@ -61,9 +63,9 @@ body {
   height: 70px;
   top: 20px;
   left: 120px;
-  background: linear-gradient(-45deg, #7af076, #89dcff, #6085f3, #23d5ab);
+  background: linear-gradient(-45deg, #76a3f0, #349fcd, #6085f3, #3823d5);
   background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
+  animation: gradient 25s ease infinite;
   border-radius: 75px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -376,7 +378,7 @@ body {
   font-size: 20px;
 }
 
-/* Styles for the links in the Links section */
+/* Styles for the links in the about section */
 .links ul {
   width: 100%;
   display: flex;
@@ -398,30 +400,12 @@ body {
 }
 
 .link-wrapper {
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .link-wrapper:hover {
-  transform: translateX(5px);
+  transform: translateX(8px);
   color: #ffffff;
-}
-
-.link-wrapper:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 105%;
-  height: 100%;
-  background: linear-gradient(to right, #095fab 20%, #25abe8 70%);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  border-radius: 10px;
-}
-
-.link-wrapper:hover:before {
-  opacity: 1;
 }
 
 /* Styles for the left car image */
@@ -529,6 +513,230 @@ footer ul li a:hover {
   text-shadow: 0 0 5px rgb(12, 3, 145);
 }
 
+/*About css*/
+
+/*Main-content*/
+
+/*main text*/
+
+.line {
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  background-color: #7baff758;
+  left: 25%;
+  border-radius: 3px;
+}
+
+.mid {
+  margin: 0 0 25vh 0;
+  width: 100%;
+  text-align: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.mid p {
+  margin-top: 20px;
+
+}
+
+.mid h2 {
+  margin: 7vh 0 5px;
+}
+
+.intro,
+.parcours,
+.passion {
+  width: 85%;
+  text-align: center;
+}
+
+/*scroll btn*/
+.pos {
+  position: absolute;
+  margin: 0 auto;
+  left: 48.5%;
+  top: 90%;
+}
+
+.down-arrow {
+  height: 60px;
+  width: 60px;
+  border: 4px solid #FFF;
+  border-radius: 100%;
+}
+
+.down-arrow:before,
+.down-arrow:after {
+  content: '';
+  position: absolute;
+  top: 26px;
+  width: 18px;
+  border: 2px solid #FFF;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.down-arrow:before {
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  left: 9px;
+}
+
+.down-arrow:after {
+  transform: rotateZ(-45deg);
+  -webkit-transform: rotateZ(-45deg);
+  left: 22px;
+}
+
+.down-arrow:hover {
+  cursor: pointer;
+  border-width: 0;
+}
+
+.down-arrow:hover:before,
+.down-arrow:hover:after {
+  top: 40px;
+}
+
+.down-arrow:hover:before {
+  left: 13px;
+}
+
+.down-arrow:hover:after {
+  left: 26px;
+}
+
+
+/*competences*/
+.competences {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0 10rem;
+}
+
+.competence-title {
+  align-items: center;
+  background: #8297f3;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.competence-box {
+  align-items: center;
+  background: #8297f3;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.box-content {
+  align-items: center;
+  background: #4876e0;
+  border-radius: 8px;
+  display: flex;
+  flex: 0 1 20%;
+  height: 60px;
+  justify-content: space-evenly;
+  margin: 1%;
+}
+
+/*links about content*/
+.links-about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.links-about ul {
+  width: 80%;
+  position: absolute;
+  gap: 35px;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.link-cv a ,
+.link-projets a{
+  text-decoration: none;
+}
+
+.link-cv a:visited,
+.link-projets a:visited {
+  text-decoration: none;
+}
+
+.link-cv {
+  position: absolute;
+  top: -105px;
+  right: 46%;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-projets{
+  position: absolute;
+  top: 10px;
+  right: 38%;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-cv:hover,
+.link-projets:hover{
+  transform: translateX(8px);
+  color: #ffffff;
+}
+
+
+.link-cv:hover:before,
+.link-projets:hover::before {
+  opacity: 1;
+}
+
+/*footer placement*/
+
+.about-page footer ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 1500px;
+  padding-bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive styles for screens up to 1485px width */
+@media screen and (max-width:1485px){
+  .mid p {
+    font-size: 15px;
+  }
+  .pos {
+    left: 47.5%;
+    top: 91%;
+  }
+
+  .link-cv{
+    top: -98px;
+  }
+
+}
+@media screen and (max-width:1395px){
+  .link-cv{
+    top: -125px;
+  }
+}
+
 /* Responsive styles for screens up to 1350px width */
 @media screen and (max-width: 1350px) {
   .right-car img {
@@ -544,10 +752,16 @@ footer ul li a:hover {
   .left-car {
     top: 42%;
   }
+  .pos{
+    display: none;
+  }
 }
+
+
 
 /* Responsive styles for screens up to 1050px width */
 @media screen and (max-width: 1050px) {
+
   .right-car img,
   .left-car img {
     display: none;
@@ -562,6 +776,28 @@ footer ul li a:hover {
     margin: 0;
   }
 }
+@media screen and (max-width: 925px){
+  .link-cv{
+    top: -115px;
+  }
+  .link-projets{
+    right: 35%;
+  }
+  .mid p{
+    font-size: 13px;
+  }
+
+  .competence-title{
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width:805px){
+  .link-cv{
+    top: -130px;
+  }
+}
 
 /* Responsive styles for screens up to 770px width */
 @media screen and (max-width: 770px) {
@@ -573,6 +809,25 @@ footer ul li a:hover {
   .links ul {
     font-size: 16px;
   }
+
+  .competence-title{
+    margin-top: -100px;
+  }
+  .competences{
+    margin: 0 3rem;
+  }
+}
+
+@media screen and (max-width:709px){
+  .link-cv{
+    top: -150px;
+    right: 0;
+    left: 0;
+  }
+  .link-projets{
+    right: 30%;
+  }
+  
 }
 
 /* Responsive styles for screens up to 605px width */
@@ -603,47 +858,13 @@ footer ul li a:hover {
   .link-wrapper:before {
     width: 100%;
   }
+
+  .competences{
+    margin: 0 1rem;
+  }
 }
 
-/*About css*/
 
-/*Main-content*/
-
-.competences{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem 0;
-}
-.competence-title{
-  align-items: center;
-  background: #12141d;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-}
-
-.competence-box{
-  align-items: center;
-    background: #12141d;
-    border-radius: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 50%;
-}
-
-.box-content{
-  align-items: center;
-  background: #4876e0;
-  border-radius: 8px;
-  display: flex;
-  flex: 0 1 20%;
-  height: 60px;
-  justify-content: space-evenly;
-  margin: 1%;
-}
 
 /* Responsive styles for screens up to 500px width */
 @media screen and (max-width: 500px) {
@@ -700,5 +921,44 @@ footer ul li a:hover {
   .about {
     top: 55%;
     width: 70%;
+  }
+
+  .link-cv{
+    top: -180px;
+  }
+
+  .link-projets{
+    right: 28%;
+  }
+  .competences{
+    font-size: 13px;
+  }
+
+
+  .about-page footer ul{
+    top: 1600px;
+  }
+  
+}
+
+@media screen and (max-width:433px) {
+  .link-cv{
+    top: -190px;
+    font-size: 17px;
+  }
+
+  .link-projets{
+    right: 26%;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width:365px) {
+  .link-cv{
+    top: -200px;
+  }
+
+  .link-projets{
+    right: 23%;
   }
 }
